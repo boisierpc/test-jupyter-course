@@ -1,0 +1,16 @@
+title: Test jupyter
+description: A test
+template:
+  repo: test-jupyter-template
+  name: test-jupyter
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
